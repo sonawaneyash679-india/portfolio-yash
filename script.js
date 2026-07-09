@@ -1,61 +1,109 @@
-console.log("Bhushan AIML Portfolio Loaded Successfully!");
+// Typing Effect
+
+const text = [
+"AI/ML Engineer",
+"Data Scientist",
+"Machine Learning Developer",
+"Deep Learning Enthusiast"
+];
 
 
-// Smooth scrolling
+let index = 0;
+let charIndex = 0;
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-    link.addEventListener("click", function(e){
-
-        e.preventDefault();
-
-        let target = document.querySelector(
-            this.getAttribute("href")
-        );
+const heading = document.querySelector(".hero h2");
 
 
-        if(target){
+function typeEffect(){
 
-            target.scrollIntoView({
-                behavior:"smooth"
-            });
+    if(charIndex < text[index].length){
+
+        heading.textContent += text[index].charAt(charIndex);
+
+        charIndex++;
+
+        setTimeout(typeEffect,100);
+
+    }
+
+    else{
+
+        setTimeout(eraseEffect,1500);
+
+    }
+
+}
+
+
+
+function eraseEffect(){
+
+    if(charIndex > 0){
+
+        heading.textContent =
+        text[index].substring(0,charIndex-1);
+
+        charIndex--;
+
+        setTimeout(eraseEffect,50);
+
+    }
+
+    else{
+
+        index++;
+
+        if(index >= text.length){
+
+            index=0;
 
         }
 
-    });
+        setTimeout(typeEffect,500);
+
+    }
+
+}
+
+
+
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+heading.textContent="";
+
+typeEffect();
 
 });
 
 
 
 
-// Scroll reveal animation
 
-const sections = document.querySelectorAll("section");
-
-
-window.addEventListener("scroll",()=>{
+// Navbar shadow on scroll
 
 
-    sections.forEach(section=>{
+window.addEventListener(
+"scroll",
+()=>{
 
 
-        let position = section.getBoundingClientRect().top;
+const header=document.querySelector("header");
 
 
-        let screenHeight = window.innerHeight;
+if(window.scrollY>50){
 
+header.style.boxShadow=
+"0 5px 30px rgba(6,182,212,0.2)";
 
-        if(position < screenHeight - 100){
+}
 
-            section.style.opacity="1";
+else{
 
-            section.style.transform="translateY(0)";
+header.style.boxShadow="none";
 
-        }
-
-
-    });
+}
 
 
 });
@@ -63,19 +111,57 @@ window.addEventListener("scroll",()=>{
 
 
 
-// Project card click message
-
-const projects = document.querySelectorAll(".project");
 
 
-projects.forEach(card=>{
+// Reveal animation
 
 
-    card.addEventListener("mouseenter",()=>{
+const cards=document.querySelectorAll(
+".skill-card,.project-card,.about-box"
+);
 
-        console.log("Project viewed");
 
-    });
+const observer=new IntersectionObserver(
+(entries)=>{
+
+
+entries.forEach(
+(entry)=>{
+
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+
+});
+
+
+},
+{
+threshold:0.2
+}
+);
+
+
+
+
+cards.forEach(
+(card)=>{
+
+
+card.style.opacity="0";
+
+card.style.transform="translateY(50px)";
+
+card.style.transition="0.8s";
+
+
+observer.observe(card);
 
 
 });
