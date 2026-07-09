@@ -2,30 +2,31 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Inter',sans-serif;
+    font-family:"Inter",sans-serif;
     scroll-behavior:smooth;
 }
 
 
 body{
-    background:#0b0f14;
-    color:#ffffff;
+
+    background:#0a0a0a;
+    color:#f5f5f5;
+
 }
 
 
-/* NAVBAR */
+/* HEADER */
 
 header{
 
     position:fixed;
     top:0;
     width:100%;
-    padding:20px 8%;
-    background:rgba(11,15,20,0.9);
-    backdrop-filter:blur(10px);
+    padding:18px 8%;
+    background:rgba(10,10,10,0.85);
+    backdrop-filter:blur(15px);
     z-index:1000;
-
-    border-bottom:1px solid #1f2937;
+    border-bottom:1px solid #222;
 
 }
 
@@ -39,11 +40,12 @@ nav{
 }
 
 
+
 .logo{
 
-    font-size:26px;
+    font-size:25px;
     font-weight:700;
-    color:#10b981;
+    color:#00d084;
 
 }
 
@@ -53,7 +55,7 @@ nav ul{
 
     display:flex;
     list-style:none;
-    gap:30px;
+    gap:35px;
 
 }
 
@@ -61,8 +63,9 @@ nav ul{
 
 nav ul li a{
 
+    color:#ddd;
     text-decoration:none;
-    color:#d1d5db;
+    font-size:15px;
     transition:.3s;
 
 }
@@ -70,9 +73,10 @@ nav ul li a{
 
 nav ul li a:hover{
 
-    color:#10b981;
+    color:#00d084;
 
 }
+
 
 
 
@@ -90,11 +94,19 @@ nav ul li a:hover{
 }
 
 
+.hero-text{
 
-.small{
+    max-width:750px;
 
-    color:#10b981;
-    font-size:20px;
+}
+
+
+
+.tag{
+
+    color:#00d084;
+    font-size:18px;
+    margin-bottom:20px;
 
 }
 
@@ -103,17 +115,8 @@ nav ul li a:hover{
 .hero h1{
 
     font-size:65px;
-    margin:15px 0;
-    font-weight:700;
-
-}
-
-
-
-.hero h2{
-
-    color:#9ca3af;
-    margin-bottom:20px;
+    line-height:1.2;
+    margin-bottom:25px;
 
 }
 
@@ -121,11 +124,12 @@ nav ul li a:hover{
 
 .hero p{
 
-    max-width:700px;
-    color:#cbd5e1;
-    line-height:30px;
+    color:#bdbdbd;
+    font-size:18px;
+    line-height:32px;
 
 }
+
 
 
 
@@ -136,11 +140,12 @@ nav ul li a:hover{
 }
 
 
+
 .btn{
 
     display:inline-block;
-    padding:14px 30px;
-    background:#10b981;
+    padding:14px 32px;
+    background:#00d084;
     color:#000;
     text-decoration:none;
     border-radius:8px;
@@ -151,20 +156,21 @@ nav ul li a:hover{
 }
 
 
+
 .btn:hover{
 
     transform:translateY(-5px);
-    box-shadow:0 10px 30px rgba(16,185,129,.3);
+    box-shadow:0 10px 30px rgba(0,208,132,.3);
 
 }
 
 
 
-.outline{
+.second{
 
     background:transparent;
-    color:#10b981;
-    border:1px solid #10b981;
+    border:1px solid #00d084;
+    color:#00d084;
 
 }
 
@@ -172,8 +178,7 @@ nav ul li a:hover{
 
 
 
-
-/* SECTIONS */
+/* SECTION */
 
 
 section{
@@ -183,14 +188,16 @@ section{
 }
 
 
-.title{
+
+section h2{
 
     text-align:center;
     font-size:38px;
-    margin-bottom:50px;
-    color:#10b981;
+    margin-bottom:45px;
+    color:#00d084;
 
 }
+
 
 
 
@@ -204,10 +211,10 @@ section{
 
     max-width:900px;
     margin:auto;
-    background:#111827;
+    background:#111;
     padding:35px;
     border-radius:15px;
-    border:1px solid #1f2937;
+    border:1px solid #222;
 
 }
 
@@ -215,7 +222,7 @@ section{
 
 .box p{
 
-    color:#cbd5e1;
+    color:#ccc;
     line-height:32px;
 
 }
@@ -225,13 +232,13 @@ section{
 
 
 
-/* GRID */
+
+/* CARDS */
 
 
-.grid{
+.cards{
 
     display:grid;
-
     grid-template-columns:
     repeat(auto-fit,minmax(250px,1fr));
 
@@ -241,16 +248,12 @@ section{
 
 
 
-
-
 .card{
 
-    background:#111827;
+    background:#111;
     padding:30px;
     border-radius:15px;
-
-    border:1px solid #1f2937;
-
+    border:1px solid #222;
     transition:.3s;
 
 }
@@ -259,12 +262,11 @@ section{
 
 .card:hover{
 
+    border-color:#00d084;
     transform:translateY(-8px);
 
-    border-color:#10b981;
-
     box-shadow:
-    0 10px 30px rgba(16,185,129,.15);
+    0 15px 30px rgba(0,208,132,.15);
 
 }
 
@@ -273,7 +275,7 @@ section{
 .card i{
 
     font-size:40px;
-    color:#10b981;
+    color:#00d084;
     margin-bottom:20px;
 
 }
@@ -290,11 +292,10 @@ section{
 
 .card p{
 
-    color:#cbd5e1;
+    color:#bbb;
     line-height:28px;
 
 }
-
 
 
 
@@ -310,11 +311,12 @@ section{
 }
 
 
+
 .contact p{
 
     margin:20px;
     font-size:18px;
-    color:#d1d5db;
+    color:#ccc;
 
 }
 
@@ -322,7 +324,7 @@ section{
 
 .contact i{
 
-    color:#10b981;
+    color:#00d084;
     margin-right:10px;
 
 }
@@ -337,10 +339,10 @@ section{
 
 footer{
 
-    padding:30px;
+    background:#050505;
     text-align:center;
-    background:#05070a;
-    color:#9ca3af;
+    padding:30px;
+    color:#888;
 
 }
 
@@ -350,7 +352,6 @@ footer{
 
 
 /* MOBILE */
-
 
 @media(max-width:768px){
 
@@ -370,13 +371,11 @@ nav ul{
 }
 
 
-
 .hero h1{
 
     font-size:42px;
 
 }
-
 
 
 .hero{
