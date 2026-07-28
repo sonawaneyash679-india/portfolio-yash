@@ -2,41 +2,44 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Bhushan Sonawane | AI/ML Engineer</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
 </head>
 
 <body>
 
-    <!--==================== HEADER ====================-->
+    <!--==================== Background ====================-->
 
-    <header>
+    <div class="blur blur1"></div>
+    <div class="blur blur2"></div>
+    <div class="blur blur3"></div>
 
-        <nav>
+    <!--==================== Navbar ====================-->
 
-            <div class="logo">
+    <header class="header">
 
-                <!-- Small Profile Photo -->
+        <nav class="navbar">
 
-                <img src="images/profile.jpg" alt="Bhushan">
+            <a href="#" class="logo">
+                Bhushan<span>AI</span>
+            </a>
 
-                <span>Bhushan Sonawane</span>
-
-            </div>
-
-            <ul>
+            <ul class="nav-links">
 
                 <li><a href="#home">Home</a></li>
 
@@ -46,89 +49,72 @@
 
                 <li><a href="#projects">Projects</a></li>
 
-                <li><a href="#experience">Experience</a></li>
-
                 <li><a href="#contact">Contact</a></li>
 
             </ul>
+
+            <div class="menu">
+
+                <i class="ri-menu-3-line"></i>
+
+            </div>
 
         </nav>
 
     </header>
 
-
-
-    <!--==================== HERO ====================-->
+    <!--==================== Hero ====================-->
 
     <section class="hero" id="home">
 
-        <div class="hero-content">
+        <div class="hero-left">
 
-            <div class="hero-text">
+            <p class="welcome">
+                👋 Hello, I'm
+            </p>
 
-                <p class="welcome">
+            <h1>
+                Bhushan <span>Sonawane</span>
+            </h1>
 
-                    👋 Hello, I'm
+            <h3 class="typing">
+                AI/ML Engineer
+            </h3>
 
-                </p>
+            <p class="hero-text">
 
-                <h1>
+                Passionate AI/ML Engineer with experience in
+                Machine Learning, FastAPI, Python,
+                SQL, Power BI and Data Analytics.
+                I enjoy building intelligent applications
+                with attractive user interfaces.
 
-                    Bhushan <span>Sonawane</span>
+            </p>
 
-                </h1>
+            <div class="hero-buttons">
 
-                <h3 class="typing">
+                <a href="#projects" class="btn1">
+                    View Projects
+                </a>
 
-                    AI / ML Engineer • Data Scientist
-
-                </h3>
-
-                <p class="hero-description">
-
-                    Passionate AI/ML Engineer with hands-on experience in
-                    Machine Learning, Deep Learning, Data Analytics,
-                    SQL, Power BI and FastAPI.
-
-                    I love building intelligent applications,
-                    solving real-world problems using Artificial Intelligence,
-                    and transforming raw data into meaningful insights.
-
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="resume.pdf" class="btn" download>
-
-                        <i class="fa-solid fa-download"></i>
-
-                        Download Resume
-
-                    </a>
-
-                </div>
-
-                <div class="social-icons">
-
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                    <a href="#"><i class="fab fa-github"></i></a>
-
-                    <a href="#"><i class="fas fa-envelope"></i></a>
-
-                </div>
+                <a href="#contact" class="btn2">
+                    Contact Me
+                </a>
 
             </div>
 
-            <!-- Right Image -->
+        </div>
 
-            <div class="hero-image">
+        <!--==================== Profile ====================-->
 
-                <div class="image-circle">
+        <div class="hero-right">
 
-                    <img src="images/profile.jpg" alt="Bhushan Sonawane">
+            <div class="image-box">
 
-                </div>
+                <div class="circle"></div>
+
+                <img src="images/profile.jpg"
+                    alt="Bhushan">
 
             </div>
 
@@ -136,467 +122,134 @@
 
     </section>
 
+    <!-- About Section -->
+    <!-- Part 2 -->
+
+    <!-- Skills Section -->
+    <!-- Part 3 -->
+
+    <!-- Projects -->
+    <!-- Part 4 -->
+
+    <!-- Contact -->
+    <!-- Part 5 -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
 
 
-    <!--==================== STATS ====================-->
+<!--==================== ABOUT ====================-->
 
-    <section class="stats">
+<section class="about section" id="about">
 
-        <div class="stat-box">
+    <div class="section-title">
+        <h2>About Me</h2>
+        <span>Who I Am</span>
+    </div>
 
-            <h2>10+</h2>
+    <div class="about-container">
 
-            <p>Projects Completed</p>
+        <div class="about-card glass">
 
-        </div>
+            <h3>AI / ML Engineer</h3>
 
-        <div class="stat-box">
+            <p>
+                I'm <strong>Bhushan Sonawane</strong>, an enthusiastic AI/ML Engineer
+                passionate about Machine Learning, Data Analytics and Full Stack
+                Development. I enjoy building intelligent applications using Python,
+                FastAPI, SQL and Power BI.
 
-            <h2>15+</h2>
-
-            <p>Technologies</p>
-
-        </div>
-
-        <div class="stat-box">
-
-            <h2>6 Months</h2>
-
-            <p>AI/ML Internship</p>
-
-        </div>
-
-        <div class="stat-box">
-
-            <h2>100%</h2>
-
-            <p>Passion for Learning</p>
-
-        </div>
-
-    </section>
-
-
-
-    <!--==================== ABOUT ====================-->
-
-    <section id="about">
-
-        <div class="section-title">
-
-            <h2>About Me</h2>
-
-            <p>Who I Am</p>
+                My goal is to solve real-world problems through Artificial
+                Intelligence and modern technologies while continuously learning
+                new skills.
+            </p>
 
         </div>
 
-        <div class="about-container">
+        <div class="about-card glass">
 
-            <div class="about-image">
+            <h3>Career Objective</h3>
 
-                <img src="images/profile.jpg" alt="Bhushan">
+            <p>
+                Seeking an opportunity where I can contribute my knowledge in
+                Artificial Intelligence, Machine Learning and Data Science while
+                enhancing my technical expertise through challenging projects.
+            </p>
 
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================== EDUCATION ====================-->
+
+<section class="education section">
+
+    <div class="section-title">
+
+        <h2>Education</h2>
+
+        <span>Academic Journey</span>
+
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item glass">
+
+            <div class="timeline-icon">
+                <i class="ri-graduation-cap-fill"></i>
             </div>
 
-            <div class="about-text">
+            <div class="timeline-content">
 
-                <h3>
+                <h3>Bachelor of Computer Applications (BCA)</h3>
 
-                    AI/ML Engineer & Data Science Enthusiast
+                <h4>Sandip University, Nashik</h4>
 
-                </h3>
+                <span>Completed</span>
 
                 <p>
-
-                    I'm a BCA Graduate with a strong interest in
-                    Artificial Intelligence, Machine Learning,
-                    Data Science and Business Intelligence.
-
-                </p>
-
-                <p>
-
-                    I completed my AI/ML Internship at
-                    <strong>Sumago Infotech Pvt. Ltd.</strong>,
-                    where I worked on Machine Learning models,
-                    data preprocessing, model training,
-                    prediction systems and real-world AI applications.
-
-                </p>
-
-                <p>
-
-                    My goal is to become a professional
-                    AI Engineer who develops scalable,
-                    intelligent and impactful software solutions.
-
+                    Studied Programming, Database Management,
+                    Python, Data Science, Machine Learning,
+                    Web Development and Software Engineering.
                 </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
+<!--==================== EXPERIENCE ====================-->
 
-    <!--==================== SKILLS ====================-->
+<section class="experience section">
 
-    <section id="skills">
+    <div class="section-title">
 
-        <div class="section-title">
+        <h2>Experience</h2>
 
-            <h2>Technical Skills</h2>
+        <span>Professional Journey</span>
 
-            <p>Technologies I Work With</p>
+    </div>
 
-        </div>
+    <div class="timeline">
 
-        <div class="skills-grid">
+        <div class="timeline-item glass">
 
-            <div class="skill-card">
-
-                <i class="fab fa-python"></i>
-
-                <h3>Python</h3>
-
+            <div class="timeline-icon">
+                <i class="ri-briefcase-fill"></i>
             </div>
 
-            <div class="skill-card">
+            <div class="timeline-content">
 
-                <i class="fas fa-brain"></i>
-
-                <h3>Machine Learning</h3>
-
-            </div>
-
-            <div class="skill-card">
-
-                <i class="fas fa-robot"></i>
-
-                <h3>Deep Learning</h3>
-
-            </div>
-
-            <div class="skill-card">
-
-                <i class="fas fa-database"></i>
-
-                <h3>SQL</h3>
-
-            </div>
-
-            <div class="skill-card">
-
-                <i class="fas fa-chart-bar"></i>
-
-                <h3>Power BI</h3>
-
-            </div>
-
-            <div class="skill-card">
-
-                <i class="fas fa-chart-line"></i>
-
-                <h3>Data Analytics</h3>
-
-            </div>
-
-            <div class="skill-card">
-
-                <i class="fas fa-code"></i>
-
-                <h3>FastAPI</h3>
-
-            </div>
-
-            <div class="skill-card">
-
-                <i class="fas fa-microchip"></i>
-
-                <h3>NLP</h3>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!--==================== SOFTWARE TOOLS ====================-->
-
-    <section id="tools">
-
-        <div class="section-title">
-
-            <h2>Software & Tools</h2>
-
-            <p>Daily Development Stack</p>
-
-        </div>
-
-        <div class="tools-grid">
-
-            <div class="tool-card">
-                <img src="images/python.png">
-                <h3>Python</h3>
-            </div>
-
-            <div class="tool-card">
-                <img src="images/vscode.png">
-                <h3>VS Code</h3>
-            </div>
-
-            <div class="tool-card">
-                <img src="images/jupyter.png">
-                <h3>Jupyter</h3>
-            </div>
-
-            <div class="tool-card">
-                <img src="images/powerbi.png">
-                <h3>Power BI</h3>
-            </div>
-
-            <div class="tool-card">
-                <img src="images/sql.png">
-                <h3>SQL</h3>
-            </div>
-
-            <div class="tool-card">
-                <img src="images/sqlite.png">
-                <h3>SQLite</h3>
-            </div>
-
-            <div class="tool-card">
-                <img src="images/git.png">
-                <h3>Git</h3>
-            </div>
-
-            <div class="tool-card">
-                <img src="images/github.png">
-                <h3>GitHub</h3>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CONTINUE IN PART 2 -->
-
-    <!--==================== FEATURED PROJECTS ====================-->
-
-    <section id="projects">
-
-        <div class="section-title">
-
-            <h2>Featured Projects</h2>
-
-            <p>Some of My Best Work</p>
-
-        </div>
-
-        <div class="projects-grid">
-
-            <!-- Project 1 -->
-
-            <div class="project-card">
-
-                <div class="project-icon">
-
-                    <i class="fas fa-microphone-alt"></i>
-
-                </div>
-
-                <h3>Voice Recognition System</h3>
-
-                <p>
-
-                    Deep Learning based speaker recognition system
-                    using MFCC feature extraction and Neural Network.
-
-                </p>
-
-                <h4>Technologies Used</h4>
-
-                <div class="project-tech">
-
-                    <span>Python</span>
-                    <span>TensorFlow</span>
-                    <span>Librosa</span>
-                    <span>NumPy</span>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Project 2 -->
-
-            <div class="project-card">
-
-                <div class="project-icon">
-
-                    <i class="fas fa-heartbeat"></i>
-
-                </div>
-
-                <h3>Medical Cost Prediction</h3>
-
-                <p>
-
-                    Machine Learning web application built using
-                    FastAPI to predict medical insurance costs.
-
-                </p>
-
-                <h4>Technologies Used</h4>
-
-                <div class="project-tech">
-
-                    <span>Python</span>
-                    <span>FastAPI</span>
-                    <span>Scikit-Learn</span>
-                    <span>HTML</span>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Project 3 -->
-
-            <div class="project-card">
-
-                <div class="project-icon">
-
-                    <i class="fas fa-chart-pie"></i>
-
-                </div>
-
-                <h3>SuperStore Power BI Dashboard</h3>
-
-                <p>
-
-                    Interactive dashboard with KPIs,
-                    DAX calculations and Power Query
-                    for business analytics.
-
-                </p>
-
-                <h4>Technologies Used</h4>
-
-                <div class="project-tech">
-
-                    <span>Power BI</span>
-                    <span>DAX</span>
-                    <span>Power Query</span>
-                    <span>Excel</span>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Project 4 -->
-
-            <div class="project-card">
-
-                <div class="project-icon">
-
-                    <i class="fas fa-database"></i>
-
-                </div>
-
-                <h3>SQL Data Analysis</h3>
-
-                <p>
-
-                    Business data analysis using SQL,
-                    Joins, Aggregation,
-                    Window Functions and Views.
-
-                </p>
-
-                <h4>Technologies Used</h4>
-
-                <div class="project-tech">
-
-                    <span>MySQL</span>
-                    <span>SQLite</span>
-                    <span>SQL</span>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Project 5 -->
-
-            <div class="project-card">
-
-                <div class="project-icon">
-
-                    <i class="fas fa-city"></i>
-
-                </div>
-
-                <h3>Kumbh Mela Management System</h3>
-
-                <p>
-
-                    Complete Django based web application
-                    with booking, parking,
-                    admin panel and database integration.
-
-                </p>
-
-                <h4>Technologies Used</h4>
-
-                <div class="project-tech">
-
-                    <span>Django</span>
-                    <span>Python</span>
-                    <span>SQLite</span>
-                    <span>HTML/CSS</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!--==================== EXPERIENCE ====================-->
-
-    <section id="experience">
-
-        <div class="section-title">
-
-            <h2>Experience</h2>
-
-            <p>Professional Journey</p>
-
-        </div>
-
-        <div class="experience-card">
-
-            <div class="experience-icon">
-
-                <i class="fas fa-briefcase"></i>
-
-            </div>
-
-            <div class="experience-content">
-
-                <h3>AI / Machine Learning Intern</h3>
+                <h3>AI / ML Intern</h3>
 
                 <h4>Sumago Infotech Pvt. Ltd.</h4>
 
@@ -604,15 +257,10 @@
 
                 <p>
 
-                    Worked on Machine Learning,
-                    Data Preprocessing,
-                    Feature Engineering,
-                    Model Training,
-                    Data Visualization,
-                    AI Applications,
-                    Python Programming,
-                    Deep Learning fundamentals
-                    and deployment concepts.
+                    Worked on Artificial Intelligence,
+                    Machine Learning, Data Preprocessing,
+                    Model Building, FastAPI Deployment,
+                    Data Analytics and real-world AI projects.
 
                 </p>
 
@@ -620,287 +268,776 @@
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
+<!--==================== STATS ====================-->
 
-    <!--==================== EDUCATION ====================-->
+<section class="stats">
 
-    <section id="education">
+    <div class="stats-container">
 
-        <div class="section-title">
+        <div class="stat-card glass">
 
-            <h2>Education</h2>
+            <h2>05+</h2>
 
-            <p>Academic Background</p>
-
-        </div>
-
-        <div class="education-card">
-
-            <i class="fas fa-graduation-cap"></i>
-
-            <h3>Bachelor of Computer Applications (BCA)</h3>
-
-            <p>
-
-                Strong foundation in Programming,
-                Database Management,
-                Software Development,
-                Data Science and Artificial Intelligence.
-
-            </p>
+            <p>Major Projects</p>
 
         </div>
 
-    </section>
+        <div class="stat-card glass">
 
+            <h2>15+</h2>
 
-
-    <!--==================== CERTIFICATIONS ====================-->
-
-    <section id="certificates">
-
-        <div class="section-title">
-
-            <h2>Certifications</h2>
-
-            <p>Professional Learning</p>
+            <p>Software Tools</p>
 
         </div>
 
-        <div class="certificate-grid">
+        <div class="stat-card glass">
 
-            <div class="certificate-card">
+            <h2>6</h2>
 
-                <i class="fas fa-award"></i>
-
-                <h3>Artificial Intelligence & Machine Learning</h3>
-
-            </div>
-
-            <div class="certificate-card">
-
-                <i class="fas fa-chart-column"></i>
-
-                <h3>Power BI</h3>
-
-            </div>
-
-            <div class="certificate-card">
-
-                <i class="fab fa-python"></i>
-
-                <h3>Python Programming</h3>
-
-            </div>
-
-            <div class="certificate-card">
-
-                <i class="fas fa-database"></i>
-
-                <h3>SQL & Database</h3>
-
-            </div>
+            <p>Months Internship</p>
 
         </div>
 
-    </section>
+        <div class="stat-card glass">
 
+            <h2>100%</h2>
 
-    <!--==================== CONTACT ====================-->
-
-    <section id="contact">
-
-        <div class="section-title">
-
-            <h2>Get In Touch</h2>
-
-            <p>Let's Build Something Amazing Together</p>
+            <p>Passion for AI</p>
 
         </div>
 
-        <div class="contact-container">
+    </div>
 
-            <div class="contact-card">
+</section>
 
-                <i class="fas fa-envelope"></i>
 
-                <h3>Email</h3>
+<!--==================== SKILLS ====================-->
 
-                <a href="mailto:yourmail@gmail.com">
-                    yourmail@gmail.com
-                </a>
+<section class="skills section" id="skills">
 
-            </div>
+    <div class="section-title">
+        <h2>My Skills</h2>
+        <span>Professional Expertise</span>
+    </div>
 
-            <div class="contact-card">
+    <div class="skills-container">
 
-                <i class="fas fa-phone"></i>
+        <!-- Technical Skills -->
 
-                <h3>Phone</h3>
+        <div class="skills-box glass">
 
-                <a href="tel:+91XXXXXXXXXX">
-                    +91 XXXXX XXXXX
-                </a>
+            <h3>Technical Skills</h3>
 
-            </div>
+            <div class="skill">
 
-            <div class="contact-card">
+                <div class="skill-info">
+                    <span>Python</span>
+                    <span>95%</span>
+                </div>
 
-                <i class="fab fa-linkedin"></i>
-
-                <h3>LinkedIn</h3>
-
-                <a href="#" target="_blank">
-                    Connect With Me
-                </a>
+                <div class="progress">
+                    <div class="progress-bar python"></div>
+                </div>
 
             </div>
 
-            <div class="contact-card">
+            <div class="skill">
 
-                <i class="fab fa-github"></i>
+                <div class="skill-info">
+                    <span>Machine Learning</span>
+                    <span>90%</span>
+                </div>
 
-                <h3>GitHub</h3>
-
-                <a href="#" target="_blank">
-                    View My Projects
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!--==================== FOOTER ====================-->
-
-    <footer>
-
-        <div class="footer-container">
-
-            <div class="footer-about">
-
-                <h2>Bhushan Sonawane</h2>
-
-                <p>
-
-                    AI / ML Engineer passionate about developing
-                    intelligent software solutions using Machine Learning,
-                    Deep Learning, Data Analytics and Artificial Intelligence.
-
-                </p>
+                <div class="progress">
+                    <div class="progress-bar ml"></div>
+                </div>
 
             </div>
 
+            <div class="skill">
 
-            <div class="footer-links">
+                <div class="skill-info">
+                    <span>Power BI</span>
+                    <span>88%</span>
+                </div>
 
-                <h3>Quick Links</h3>
-
-                <ul>
-
-                    <li><a href="#home">Home</a></li>
-
-                    <li><a href="#about">About</a></li>
-
-                    <li><a href="#skills">Skills</a></li>
-
-                    <li><a href="#projects">Projects</a></li>
-
-                    <li><a href="#experience">Experience</a></li>
-
-                    <li><a href="#contact">Contact</a></li>
-
-                </ul>
+                <div class="progress">
+                    <div class="progress-bar powerbi"></div>
+                </div>
 
             </div>
 
+            <div class="skill">
 
-            <div class="footer-tech">
+                <div class="skill-info">
+                    <span>SQL</span>
+                    <span>90%</span>
+                </div>
 
-                <h3>Core Technologies</h3>
-
-                <ul>
-
-                    <li>Python</li>
-
-                    <li>Machine Learning</li>
-
-                    <li>Deep Learning</li>
-
-                    <li>SQL</li>
-
-                    <li>Power BI</li>
-
-                    <li>FastAPI</li>
-
-                </ul>
+                <div class="progress">
+                    <div class="progress-bar sql"></div>
+                </div>
 
             </div>
 
+            <div class="skill">
 
-            <div class="footer-social">
+                <div class="skill-info">
+                    <span>FastAPI</span>
+                    <span>85%</span>
+                </div>
 
-                <h3>Follow Me</h3>
-
-                <div class="footer-icons">
-
-                    <a href="#" target="_blank">
-
-                        <i class="fab fa-github"></i>
-
-                    </a>
-
-                    <a href="#" target="_blank">
-
-                        <i class="fab fa-linkedin"></i>
-
-                    </a>
-
-                    <a href="mailto:yourmail@gmail.com">
-
-                        <i class="fas fa-envelope"></i>
-
-                    </a>
-
-                    <a href="#home">
-
-                        <i class="fas fa-arrow-up"></i>
-
-                    </a>
-
+                <div class="progress">
+                    <div class="progress-bar fastapi"></div>
                 </div>
 
             </div>
 
         </div>
 
+        <!-- AI Domains -->
 
-        <hr>
+        <div class="skills-box glass">
 
+            <h3>AI / ML Expertise</h3>
 
-        <div class="copyright">
+            <div class="domain-grid">
+
+                <div class="domain-card">
+                    🤖
+                    <h4>Machine Learning</h4>
+                </div>
+
+                <div class="domain-card">
+                    📊
+                    <h4>Data Analysis</h4>
+                </div>
+
+                <div class="domain-card">
+                    🧠
+                    <h4>Artificial Intelligence</h4>
+                </div>
+
+                <div class="domain-card">
+                    📈
+                    <h4>Data Visualization</h4>
+                </div>
+
+                <div class="domain-card">
+                    ⚡
+                    <h4>FastAPI</h4>
+                </div>
+
+                <div class="domain-card">
+                    💻
+                    <h4>Backend Development</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================== SOFTWARE TOOLS ====================-->
+
+<section class="tools section">
+
+    <div class="section-title">
+        <h2>Software Tools</h2>
+        <span>Technologies I Use</span>
+    </div>
+
+    <div class="tools-grid">
+
+        <div class="tool-card glass">
+            <i class="ri-terminal-box-fill"></i>
+            <h4>Python</h4>
+        </div>
+
+        <div class="tool-card glass">
+            <i class="ri-bar-chart-fill"></i>
+            <h4>Power BI</h4>
+        </div>
+
+        <div class="tool-card glass">
+            <i class="ri-database-2-fill"></i>
+            <h4>SQL</h4>
+        </div>
+
+        <div class="tool-card glass">
+            <i class="ri-database-fill"></i>
+            <h4>SQLite</h4>
+        </div>
+
+        <div class="tool-card glass">
+            <i class="ri-code-box-fill"></i>
+            <h4>VS Code</h4>
+        </div>
+
+        <div class="tool-card glass">
+            <i class="ri-book-open-fill"></i>
+            <h4>Jupyter</h4>
+        </div>
+
+        <div class="tool-card glass">
+            <i class="ri-git-branch-fill"></i>
+            <h4>Git</h4>
+        </div>
+
+        <div class="tool-card glass">
+            <i class="ri-github-fill"></i>
+            <h4>GitHub</h4>
+        </div>
+
+        <div class="tool-card glass">
+            <i class="ri-flashlight-fill"></i>
+            <h4>FastAPI</h4>
+        </div>
+
+        <div class="tool-card glass">
+            <i class="ri-line-chart-fill"></i>
+            <h4>Pandas</h4>
+        </div>
+
+        <div class="tool-card glass">
+            <i class="ri-function-fill"></i>
+            <h4>NumPy</h4>
+        </div>
+
+        <div class="tool-card glass">
+            <i class="ri-cpu-fill"></i>
+            <h4>Scikit-Learn</h4>
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================== CERTIFICATIONS ====================-->
+
+<section class="certifications section">
+
+    <div class="section-title">
+
+        <h2>Highlights</h2>
+
+        <span>Achievements</span>
+
+    </div>
+
+    <div class="certificate-container">
+
+        <div class="certificate glass">
+
+            <i class="ri-award-fill"></i>
+
+            <h3>AI / ML Internship</h3>
 
             <p>
-
-                © 2026 Bhushan Sonawane |
-                Designed & Developed with
-                ❤️ using HTML, CSS & JavaScript.
-
+                Successfully completed a 6-month AI/ML Internship at
+                Sumago Infotech Pvt. Ltd.
             </p>
 
         </div>
 
-    </footer>
+        <div class="certificate glass">
+
+            <i class="ri-lightbulb-flash-fill"></i>
+
+            <h3>Real-World Projects</h3>
+
+            <p>
+                Developed Machine Learning, FastAPI,
+                SQL and Power BI projects with
+                practical implementations.
+            </p>
+
+        </div>
+
+        <div class="certificate glass">
+
+            <i class="ri-rocket-2-fill"></i>
+
+            <h3>Continuous Learning</h3>
+
+            <p>
+                Passionate about AI, Data Science,
+                Deep Learning and modern software development.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <script src="script.js"></script>
+<!--==================== PROJECTS ====================-->
 
-</body>
+<section class="projects section" id="projects">
 
-</html>
-    
-    
+    <div class="section-title">
+        <h2>Featured Projects</h2>
+        <span>My Recent Work</span>
+    </div>
+
+    <div class="projects-container">
+
+        <!-- Project 1 -->
+
+        <div class="project-card glass">
+
+            <div class="project-icon">
+                <i class="ri-mic-2-fill"></i>
+            </div>
+
+            <h3>Voice Recognition System</h3>
+
+            <p>
+                AI-based voice recognition application that identifies speakers
+                using Machine Learning and audio feature extraction techniques.
+                Developed using Python, Librosa, NumPy and Scikit-Learn.
+            </p>
+
+            <div class="project-tech">
+
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Librosa</span>
+                <span>NumPy</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+                <a href="#" class="project-btn">
+                    <i class="ri-github-fill"></i>
+                    GitHub
+                </a>
+
+                <a href="#" class="project-btn">
+                    <i class="ri-external-link-line"></i>
+                    Demo
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Project 2 -->
+
+        <div class="project-card glass">
+
+            <div class="project-icon">
+                <i class="ri-heart-pulse-fill"></i>
+            </div>
+
+            <h3>Medical Cost Prediction</h3>
+
+            <p>
+                Machine Learning web application that predicts medical insurance
+                costs based on user inputs. Built using FastAPI and deployed
+                with a responsive frontend.
+            </p>
+
+            <div class="project-tech">
+
+                <span>FastAPI</span>
+                <span>Python</span>
+                <span>ML</span>
+                <span>HTML/CSS</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+                <a href="#" class="project-btn">
+                    <i class="ri-github-fill"></i>
+                    GitHub
+                </a>
+
+                <a href="#" class="project-btn">
+                    <i class="ri-external-link-line"></i>
+                    Live
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Project 3 -->
+
+        <div class="project-card glass">
+
+            <div class="project-icon">
+                <i class="ri-bar-chart-2-fill"></i>
+            </div>
+
+            <h3>SuperStore Power BI Dashboard</h3>
+
+            <p>
+                Interactive business dashboard with KPIs, sales analysis,
+                profit trends, regional insights and dynamic Power BI
+                visualizations for decision making.
+            </p>
+
+            <div class="project-tech">
+
+                <span>Power BI</span>
+                <span>DAX</span>
+                <span>Power Query</span>
+                <span>Excel</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+                <a href="#" class="project-btn">
+                    <i class="ri-github-fill"></i>
+                    GitHub
+                </a>
+
+                <a href="#" class="project-btn">
+                    <i class="ri-eye-fill"></i>
+                    Preview
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Project 4 -->
+
+        <div class="project-card glass">
+
+            <div class="project-icon">
+                <i class="ri-database-2-fill"></i>
+            </div>
+
+            <h3>SQL Data Analysis</h3>
+
+            <p>
+                Performed advanced SQL queries for business reporting,
+                joins, aggregate functions, views and analytical
+                insights using relational databases.
+            </p>
+
+            <div class="project-tech">
+
+                <span>SQL</span>
+                <span>SQLite</span>
+                <span>Database</span>
+                <span>Analytics</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+                <a href="#" class="project-btn">
+                    <i class="ri-github-fill"></i>
+                    GitHub
+                </a>
+
+                <a href="#" class="project-btn">
+                    <i class="ri-folder-open-fill"></i>
+                    Details
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Project 5 -->
+
+        <div class="project-card glass">
+
+            <div class="project-icon">
+                <i class="ri-building-4-fill"></i>
+            </div>
+
+            <h3>Kumbh Mela Management System</h3>
+
+            <p>
+                Django-based web application for Kumbh Mela management,
+                including user registration, parking, accommodation,
+                booking and admin management modules.
+            </p>
+
+            <div class="project-tech">
+
+                <span>Django</span>
+                <span>Python</span>
+                <span>SQLite</span>
+                <span>HTML/CSS</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+                <a href="#" class="project-btn">
+                    <i class="ri-github-fill"></i>
+                    GitHub
+                </a>
+
+                <a href="#" class="project-btn">
+                    <i class="ri-external-link-line"></i>
+                    Live
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Project 6 -->
+
+        <div class="project-card glass">
+
+            <div class="project-icon">
+                <i class="ri-cpu-fill"></i>
+            </div>
+
+            <h3>AI & ML Portfolio Website</h3>
+
+            <p>
+                Responsive premium portfolio featuring Glassmorphism UI,
+                animations, modern sections and recruiter-friendly design
+                built using HTML, CSS and JavaScript.
+            </p>
+
+            <div class="project-tech">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Responsive</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+                <a href="#" class="project-btn">
+                    <i class="ri-github-fill"></i>
+                    GitHub
+                </a>
+
+                <a href="#" class="project-btn">
+                    <i class="ri-global-line"></i>
+                    Live
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!--==================== CONTACT ====================-->
+
+<section class="contact section" id="contact">
+
+    <div class="section-title">
+
+        <h2>Contact Me</h2>
+
+        <span>Let's Work Together</span>
+
+    </div>
+
+    <div class="contact-container">
+
+        <!-- Contact Info -->
+
+        <div class="contact-left glass">
+
+            <h3>Get In Touch</h3>
+
+            <p>
+                I'm always interested in AI/ML projects, internships,
+                freelance work and exciting opportunities.
+                Feel free to contact me anytime.
+            </p>
+
+            <div class="contact-card">
+
+                <i class="ri-mail-fill"></i>
+
+                <div>
+                    <h4>Email</h4>
+                    <p>yourmail@gmail.com</p>
+                </div>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="ri-phone-fill"></i>
+
+                <div>
+                    <h4>Phone</h4>
+                    <p>+91 XXXXXXXXXX</p>
+                </div>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="ri-map-pin-fill"></i>
+
+                <div>
+                    <h4>Location</h4>
+                    <p>Nashik, Maharashtra</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Social Buttons -->
+
+        <div class="contact-right glass">
+
+            <h3>Connect With Me</h3>
+
+            <div class="social-buttons">
+
+                <a href="#" class="social-btn">
+
+                    <i class="ri-github-fill"></i>
+
+                    GitHub
+
+                </a>
+
+                <a href="#" class="social-btn">
+
+                    <i class="ri-linkedin-box-fill"></i>
+
+                    LinkedIn
+
+                </a>
+
+                <a href="#" class="social-btn">
+
+                    <i class="ri-instagram-fill"></i>
+
+                    Instagram
+
+                </a>
+
+                <a href="#" class="social-btn">
+
+                    <i class="ri-download-cloud-fill"></i>
+
+                    Download Resume
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================== CALL TO ACTION ====================-->
+
+<section class="cta">
+
+    <div class="cta-box glass">
+
+        <h2>Let's Build Something Amazing Together 🚀</h2>
+
+        <p>
+            Interested in AI, Machine Learning, Data Science or
+            Web Development projects?
+            Let's connect and create something impactful.
+        </p>
+
+        <a href="#contact" class="btn1">
+
+            Hire Me
+
+        </a>
+
+    </div>
+
+</section>
+
+<!--==================== FOOTER ====================-->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+
+            <h2>
+                Bhushan<span>AI</span>
+            </h2>
+
+            <p>
+                AI / ML Engineer • Python Developer • Data Analyst
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+        <div class="footer-social">
+
+            <a href="#"><i class="ri-github-fill"></i></a>
+
+            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+
+            <a href="#"><i class="ri-mail-fill"></i></a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Bhushan Sonawane.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!--==================== SCROLL TOP ====================-->
+
+<button id="scrollTop">
+
+    <i class="ri-arrow-up-line"></i>
+
+</button>
