@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,20 +10,30 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!--==================== HEADER ====================-->
 
     <header>
 
         <nav>
 
             <div class="logo">
-                Bhushan<span>.</span>
+
+                <!-- Small Profile Photo -->
+
+                <img src="images/profile.jpg" alt="Bhushan">
+
+                <span>Bhushan Sonawane</span>
+
             </div>
 
             <ul>
@@ -32,8 +43,6 @@
                 <li><a href="#about">About</a></li>
 
                 <li><a href="#skills">Skills</a></li>
-
-                <li><a href="#technologies">Technologies</a></li>
 
                 <li><a href="#projects">Projects</a></li>
 
@@ -48,36 +57,46 @@
     </header>
 
 
-    <!-- ================= HERO ================= -->
 
-    <section id="home" class="hero">
+    <!--==================== HERO ====================-->
+
+    <section class="hero" id="home">
 
         <div class="hero-content">
 
             <div class="hero-text">
 
-                <p class="tag">
-                    AI Engineer • Machine Learning • Data Scientist
+                <p class="welcome">
+
+                    👋 Hello, I'm
+
                 </p>
 
                 <h1>
 
-                    Building Intelligent
-                    <span>AI Solutions</span>
-                    With Data
+                    Bhushan <span>Sonawane</span>
 
                 </h1>
 
-                <p>
+                <h3 class="typing">
 
-                    Passionate AI/ML Engineer specializing in Machine Learning,
-                    Deep Learning, NLP, Data Analytics, SQL and Power BI.
-                    I love transforming complex data into intelligent solutions
-                    that solve real-world business problems.
+                    AI / ML Engineer • Data Scientist
+
+                </h3>
+
+                <p class="hero-description">
+
+                    Passionate AI/ML Engineer with hands-on experience in
+                    Machine Learning, Deep Learning, Data Analytics,
+                    SQL, Power BI and FastAPI.
+
+                    I love building intelligent applications,
+                    solving real-world problems using Artificial Intelligence,
+                    and transforming raw data into meaningful insights.
 
                 </p>
 
-                <div class="buttons">
+                <div class="hero-buttons">
 
                     <a href="resume.pdf" class="btn" download>
 
@@ -89,17 +108,25 @@
 
                 </div>
 
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                    <a href="#"><i class="fab fa-github"></i></a>
+
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+
+                </div>
+
             </div>
 
-
-            <!-- PHOTO -->
+            <!-- Right Image -->
 
             <div class="hero-image">
 
-                <div class="image-box">
+                <div class="image-circle">
 
-                    <img src="images/profile.jpg"
-                        alt="Bhushan Sonawane">
+                    <img src="images/profile.jpg" alt="Bhushan Sonawane">
 
                 </div>
 
@@ -111,19 +138,19 @@
 
 
 
-    <!-- ================= STATS ================= -->
+    <!--==================== STATS ====================-->
 
     <section class="stats">
 
-        <div class="stat-card">
+        <div class="stat-box">
 
             <h2>10+</h2>
 
-            <p>Projects</p>
+            <p>Projects Completed</p>
 
         </div>
 
-        <div class="stat-card">
+        <div class="stat-box">
 
             <h2>15+</h2>
 
@@ -131,19 +158,19 @@
 
         </div>
 
-        <div class="stat-card">
+        <div class="stat-box">
 
             <h2>6 Months</h2>
 
-            <p>Internship</p>
+            <p>AI/ML Internship</p>
 
         </div>
 
-        <div class="stat-card">
+        <div class="stat-box">
 
-            <h2>20+</h2>
+            <h2>100%</h2>
 
-            <p>ML Models</p>
+            <p>Passion for Learning</p>
 
         </div>
 
@@ -151,44 +178,61 @@
 
 
 
-    <!-- ================= ABOUT ================= -->
+    <!--==================== ABOUT ====================-->
 
     <section id="about">
 
-        <h2>About Me</h2>
+        <div class="section-title">
 
-        <div class="box">
+            <h2>About Me</h2>
 
-            <p>
+            <p>Who I Am</p>
 
-                Hello! I'm <b>Bhushan Sonawane</b>, a passionate
-                AI/ML Engineer and Data Science enthusiast.
+        </div>
 
-                I completed my Bachelor's in Computer Applications
-                and enjoy building Machine Learning, Deep Learning
-                and Data Analytics projects.
+        <div class="about-container">
 
-            </p>
+            <div class="about-image">
 
-            <br>
+                <img src="images/profile.jpg" alt="Bhushan">
 
-            <p>
+            </div>
 
-                My expertise includes Python, SQL, Power BI,
-                Machine Learning, Deep Learning, FastAPI,
-                NLP, Data Visualization and Dashboard Development.
+            <div class="about-text">
 
-            </p>
+                <h3>
 
-            <br>
+                    AI/ML Engineer & Data Science Enthusiast
 
-            <p>
+                </h3>
 
-                My goal is to build intelligent applications
-                that create real business value through
-                Artificial Intelligence.
+                <p>
 
-            </p>
+                    I'm a BCA Graduate with a strong interest in
+                    Artificial Intelligence, Machine Learning,
+                    Data Science and Business Intelligence.
+
+                </p>
+
+                <p>
+
+                    I completed my AI/ML Internship at
+                    <strong>Sumago Infotech Pvt. Ltd.</strong>,
+                    where I worked on Machine Learning models,
+                    data preprocessing, model training,
+                    prediction systems and real-world AI applications.
+
+                </p>
+
+                <p>
+
+                    My goal is to become a professional
+                    AI Engineer who develops scalable,
+                    intelligent and impactful software solutions.
+
+                </p>
+
+            </div>
 
         </div>
 
@@ -196,74 +240,667 @@
 
 
 
-    <!-- ================= SKILLS ================= -->
+    <!--==================== SKILLS ====================-->
 
     <section id="skills">
 
-        <h2>Core Skills</h2>
+        <div class="section-title">
 
-        <div class="cards">
+            <h2>Technical Skills</h2>
 
-            <div class="card">
+            <p>Technologies I Work With</p>
 
-                <i class="fa-brands fa-python"></i>
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <i class="fab fa-python"></i>
 
                 <h3>Python</h3>
 
-                <p>Advanced Programming</p>
-
             </div>
 
-            <div class="card">
+            <div class="skill-card">
 
-                <i class="fa-solid fa-brain"></i>
+                <i class="fas fa-brain"></i>
 
                 <h3>Machine Learning</h3>
 
-                <p>Regression, Classification</p>
-
             </div>
 
-            <div class="card">
+            <div class="skill-card">
 
-                <i class="fa-solid fa-network-wired"></i>
+                <i class="fas fa-robot"></i>
 
                 <h3>Deep Learning</h3>
 
-                <p>ANN, CNN, RNN</p>
-
             </div>
 
-            <div class="card">
+            <div class="skill-card">
 
-                <i class="fa-solid fa-chart-line"></i>
-
-                <h3>Data Analytics</h3>
-
-                <p>EDA & Insights</p>
-
-            </div>
-
-            <div class="card">
-
-                <i class="fa-solid fa-database"></i>
+                <i class="fas fa-database"></i>
 
                 <h3>SQL</h3>
 
-                <p>Database Management</p>
-
             </div>
 
-            <div class="card">
+            <div class="skill-card">
 
-                <i class="fa-solid fa-chart-column"></i>
+                <i class="fas fa-chart-bar"></i>
 
                 <h3>Power BI</h3>
 
-                <p>Interactive Dashboards</p>
+            </div>
+
+            <div class="skill-card">
+
+                <i class="fas fa-chart-line"></i>
+
+                <h3>Data Analytics</h3>
+
+            </div>
+
+            <div class="skill-card">
+
+                <i class="fas fa-code"></i>
+
+                <h3>FastAPI</h3>
+
+            </div>
+
+            <div class="skill-card">
+
+                <i class="fas fa-microchip"></i>
+
+                <h3>NLP</h3>
 
             </div>
 
         </div>
 
     </section>
+
+
+
+    <!--==================== SOFTWARE TOOLS ====================-->
+
+    <section id="tools">
+
+        <div class="section-title">
+
+            <h2>Software & Tools</h2>
+
+            <p>Daily Development Stack</p>
+
+        </div>
+
+        <div class="tools-grid">
+
+            <div class="tool-card">
+                <img src="images/python.png">
+                <h3>Python</h3>
+            </div>
+
+            <div class="tool-card">
+                <img src="images/vscode.png">
+                <h3>VS Code</h3>
+            </div>
+
+            <div class="tool-card">
+                <img src="images/jupyter.png">
+                <h3>Jupyter</h3>
+            </div>
+
+            <div class="tool-card">
+                <img src="images/powerbi.png">
+                <h3>Power BI</h3>
+            </div>
+
+            <div class="tool-card">
+                <img src="images/sql.png">
+                <h3>SQL</h3>
+            </div>
+
+            <div class="tool-card">
+                <img src="images/sqlite.png">
+                <h3>SQLite</h3>
+            </div>
+
+            <div class="tool-card">
+                <img src="images/git.png">
+                <h3>Git</h3>
+            </div>
+
+            <div class="tool-card">
+                <img src="images/github.png">
+                <h3>GitHub</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTINUE IN PART 2 -->
+
+    <!--==================== FEATURED PROJECTS ====================-->
+
+    <section id="projects">
+
+        <div class="section-title">
+
+            <h2>Featured Projects</h2>
+
+            <p>Some of My Best Work</p>
+
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fas fa-microphone-alt"></i>
+
+                </div>
+
+                <h3>Voice Recognition System</h3>
+
+                <p>
+
+                    Deep Learning based speaker recognition system
+                    using MFCC feature extraction and Neural Network.
+
+                </p>
+
+                <h4>Technologies Used</h4>
+
+                <div class="project-tech">
+
+                    <span>Python</span>
+                    <span>TensorFlow</span>
+                    <span>Librosa</span>
+                    <span>NumPy</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Project 2 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fas fa-heartbeat"></i>
+
+                </div>
+
+                <h3>Medical Cost Prediction</h3>
+
+                <p>
+
+                    Machine Learning web application built using
+                    FastAPI to predict medical insurance costs.
+
+                </p>
+
+                <h4>Technologies Used</h4>
+
+                <div class="project-tech">
+
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>Scikit-Learn</span>
+                    <span>HTML</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Project 3 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fas fa-chart-pie"></i>
+
+                </div>
+
+                <h3>SuperStore Power BI Dashboard</h3>
+
+                <p>
+
+                    Interactive dashboard with KPIs,
+                    DAX calculations and Power Query
+                    for business analytics.
+
+                </p>
+
+                <h4>Technologies Used</h4>
+
+                <div class="project-tech">
+
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+                    <span>Excel</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Project 4 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fas fa-database"></i>
+
+                </div>
+
+                <h3>SQL Data Analysis</h3>
+
+                <p>
+
+                    Business data analysis using SQL,
+                    Joins, Aggregation,
+                    Window Functions and Views.
+
+                </p>
+
+                <h4>Technologies Used</h4>
+
+                <div class="project-tech">
+
+                    <span>MySQL</span>
+                    <span>SQLite</span>
+                    <span>SQL</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Project 5 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fas fa-city"></i>
+
+                </div>
+
+                <h3>Kumbh Mela Management System</h3>
+
+                <p>
+
+                    Complete Django based web application
+                    with booking, parking,
+                    admin panel and database integration.
+
+                </p>
+
+                <h4>Technologies Used</h4>
+
+                <div class="project-tech">
+
+                    <span>Django</span>
+                    <span>Python</span>
+                    <span>SQLite</span>
+                    <span>HTML/CSS</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--==================== EXPERIENCE ====================-->
+
+    <section id="experience">
+
+        <div class="section-title">
+
+            <h2>Experience</h2>
+
+            <p>Professional Journey</p>
+
+        </div>
+
+        <div class="experience-card">
+
+            <div class="experience-icon">
+
+                <i class="fas fa-briefcase"></i>
+
+            </div>
+
+            <div class="experience-content">
+
+                <h3>AI / Machine Learning Intern</h3>
+
+                <h4>Sumago Infotech Pvt. Ltd.</h4>
+
+                <span>6 Months Internship</span>
+
+                <p>
+
+                    Worked on Machine Learning,
+                    Data Preprocessing,
+                    Feature Engineering,
+                    Model Training,
+                    Data Visualization,
+                    AI Applications,
+                    Python Programming,
+                    Deep Learning fundamentals
+                    and deployment concepts.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--==================== EDUCATION ====================-->
+
+    <section id="education">
+
+        <div class="section-title">
+
+            <h2>Education</h2>
+
+            <p>Academic Background</p>
+
+        </div>
+
+        <div class="education-card">
+
+            <i class="fas fa-graduation-cap"></i>
+
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+
+            <p>
+
+                Strong foundation in Programming,
+                Database Management,
+                Software Development,
+                Data Science and Artificial Intelligence.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!--==================== CERTIFICATIONS ====================-->
+
+    <section id="certificates">
+
+        <div class="section-title">
+
+            <h2>Certifications</h2>
+
+            <p>Professional Learning</p>
+
+        </div>
+
+        <div class="certificate-grid">
+
+            <div class="certificate-card">
+
+                <i class="fas fa-award"></i>
+
+                <h3>Artificial Intelligence & Machine Learning</h3>
+
+            </div>
+
+            <div class="certificate-card">
+
+                <i class="fas fa-chart-column"></i>
+
+                <h3>Power BI</h3>
+
+            </div>
+
+            <div class="certificate-card">
+
+                <i class="fab fa-python"></i>
+
+                <h3>Python Programming</h3>
+
+            </div>
+
+            <div class="certificate-card">
+
+                <i class="fas fa-database"></i>
+
+                <h3>SQL & Database</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--==================== CONTACT ====================-->
+
+    <section id="contact">
+
+        <div class="section-title">
+
+            <h2>Get In Touch</h2>
+
+            <p>Let's Build Something Amazing Together</p>
+
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-card">
+
+                <i class="fas fa-envelope"></i>
+
+                <h3>Email</h3>
+
+                <a href="mailto:yourmail@gmail.com">
+                    yourmail@gmail.com
+                </a>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fas fa-phone"></i>
+
+                <h3>Phone</h3>
+
+                <a href="tel:+91XXXXXXXXXX">
+                    +91 XXXXX XXXXX
+                </a>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fab fa-linkedin"></i>
+
+                <h3>LinkedIn</h3>
+
+                <a href="#" target="_blank">
+                    Connect With Me
+                </a>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fab fa-github"></i>
+
+                <h3>GitHub</h3>
+
+                <a href="#" target="_blank">
+                    View My Projects
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--==================== FOOTER ====================-->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-about">
+
+                <h2>Bhushan Sonawane</h2>
+
+                <p>
+
+                    AI / ML Engineer passionate about developing
+                    intelligent software solutions using Machine Learning,
+                    Deep Learning, Data Analytics and Artificial Intelligence.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#about">About</a></li>
+
+                    <li><a href="#skills">Skills</a></li>
+
+                    <li><a href="#projects">Projects</a></li>
+
+                    <li><a href="#experience">Experience</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-tech">
+
+                <h3>Core Technologies</h3>
+
+                <ul>
+
+                    <li>Python</li>
+
+                    <li>Machine Learning</li>
+
+                    <li>Deep Learning</li>
+
+                    <li>SQL</li>
+
+                    <li>Power BI</li>
+
+                    <li>FastAPI</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h3>Follow Me</h3>
+
+                <div class="footer-icons">
+
+                    <a href="#" target="_blank">
+
+                        <i class="fab fa-github"></i>
+
+                    </a>
+
+                    <a href="#" target="_blank">
+
+                        <i class="fab fa-linkedin"></i>
+
+                    </a>
+
+                    <a href="mailto:yourmail@gmail.com">
+
+                        <i class="fas fa-envelope"></i>
+
+                    </a>
+
+                    <a href="#home">
+
+                        <i class="fas fa-arrow-up"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="copyright">
+
+            <p>
+
+                © 2026 Bhushan Sonawane |
+                Designed & Developed with
+                ❤️ using HTML, CSS & JavaScript.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+    
+    
