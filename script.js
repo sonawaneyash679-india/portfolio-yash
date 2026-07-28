@@ -1,30 +1,53 @@
-// =========================
-// SMOOTH SCROLL
-// =========================
+// ===============================
+// NAVBAR BACKGROUND ON SCROLL
+// ===============================
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+const header = document.querySelector("header");
 
-    anchor.addEventListener("click", function (e) {
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 80) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+});
 
-        e.preventDefault();
+// ===============================
+// ACTIVE NAVIGATION
+// ===============================
 
-        document.querySelector(this.getAttribute("href"))
-            .scrollIntoView({
-                behavior: "smooth"
-            });
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 120;
+
+        if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
 
     });
 
 });
 
-
-// =========================
-// REVEAL ANIMATION
-// =========================
-
-const revealElements = document.querySelectorAll(
-    ".card,.box,.stat-card,.project,.tech-card,.timeline-item"
-);
+// ===============================
+// SCROLL REVEAL
+// ===============================
 
 const observer = new IntersectionObserver((entries) => {
 
@@ -39,12 +62,12 @@ const observer = new IntersectionObserver((entries) => {
     });
 
 }, {
-
-    threshold: 0.15
-
+    threshold:0.2
 });
 
-revealElements.forEach((el) => {
+document.querySelectorAll(
+".skill-card,.tool-card,.project-card,.experience-card,.education-card,.certificate-card,.contact-card,.stat-box,.about-container"
+).forEach(el=>{
 
     el.classList.add("hidden");
 
@@ -52,320 +75,223 @@ revealElements.forEach((el) => {
 
 });
 
+// ===============================
+// HERO TYPING EFFECT
+// ===============================
 
-// =========================
-// NAVBAR BACKGROUND
-// =========================
+const typing = document.querySelector(".typing");
 
-window.addEventListener("scroll", () => {
+const words = [
 
-    const header = document.querySelector("header");
+    "AI / ML Engineer",
 
-    if (window.scrollY > 70) {
+    "Data Scientist",
 
-        header.classList.add("sticky");
+    "Python Developer",
 
-    } else {
+    "Power BI Developer",
 
-        header.classList.remove("sticky");
+    "Machine Learning Engineer"
 
-    }
+];
 
-});
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
+function type(){
 
-// =========================
-// ACTIVE NAVIGATION
-// =========================
+    const current = words[wordIndex];
 
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav ul li a");
+    if(!deleting){
 
-window.addEventListener("scroll", () => {
+        typing.textContent = current.substring(0,charIndex++);
 
-    let current = "";
+        if(charIndex > current.length){
 
-    sections.forEach(section => {
+            deleting = true;
 
-        const sectionTop = section.offsetTop - 150;
+            setTimeout(type,1200);
 
-        if (pageYOffset >= sectionTop) {
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-
-            link.classList.add("active");
+            return;
 
         }
 
-    });
+    }else{
 
-});
+        typing.textContent = current.substring(0,charIndex--);
 
+        if(charIndex < 0){
 
-// =========================
-// TYPING EFFECT
-// =========================
+            deleting = false;
 
-const typing = document.querySelector(".tag");
+            wordIndex++;
 
-if (typing) {
+            if(wordIndex >= words.length){
 
-    const words = [
-
-        "AI Engineer",
-
-        "Machine Learning Engineer",
-
-        "Data Scientist",
-
-        "Deep Learning Enthusiast",
-
-        "Python Developer",
-
-        "Power BI Developer"
-
-    ];
-
-    let wordIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
-
-    function typeEffect() {
-
-        const currentWord = words[wordIndex];
-
-        if (!deleting) {
-
-            typing.textContent = currentWord.substring(0, charIndex++);
-
-            if (charIndex > currentWord.length) {
-
-                deleting = true;
-
-                setTimeout(typeEffect, 1500);
-
-                return;
-
-            }
-
-        } else {
-
-            typing.textContent = currentWord.substring(0, charIndex--);
-
-            if (charIndex < 0) {
-
-                deleting = false;
-
-                wordIndex++;
-
-                if (wordIndex >= words.length) {
-
-                    wordIndex = 0;
-
-                }
+                wordIndex = 0;
 
             }
 
         }
 
-        setTimeout(typeEffect, deleting ? 50 : 120);
-
     }
 
-    typeEffect();
+    setTimeout(type,deleting ? 50 : 100);
 
 }
 
+type();
 
-// =========================
+// ===============================
 // COUNTER ANIMATION
-// =========================
+// ===============================
 
-const counters = document.querySelectorAll(".stat-card h2");
+const counters = document.querySelectorAll(".stat-box h2");
 
 const speed = 200;
 
-counters.forEach(counter => {
+const counterObserver = new IntersectionObserver(entries=>{
 
-    const animate = () => {
+entries.forEach(entry=>{
 
-        const target = +counter.innerText.replace(/\D/g, "");
+if(entry.isIntersecting){
 
-        const count = +counter.getAttribute("data-count") || 0;
+const counter = entry.target;
 
-        const increment = target / speed;
+const target = parseInt(counter.innerText);
 
-        if (count < target) {
+let count = 0;
 
-            counter.setAttribute("data-count", Math.ceil(count + increment));
+const update = ()=>{
 
-            counter.innerText = Math.ceil(count + increment) + "+";
+count += Math.ceil(target/speed);
 
-            requestAnimationFrame(animate);
+if(count < target){
 
-        } else {
+counter.innerText = count + "+";
 
-            counter.innerText = target + "+";
+requestAnimationFrame(update);
 
-        }
+}else{
 
-    };
-
-    animate();
-
-});
-
-
-// =========================
-// HERO IMAGE FLOAT
-// =========================
-
-const heroImage = document.querySelector(".hero-image");
-
-if (heroImage) {
-
-    let position = 0;
-
-    setInterval(() => {
-
-        position = position === 0 ? 15 : 0;
-
-        heroImage.style.transform = `translateY(${position}px)`;
-
-    }, 2500);
+counter.innerText = target + "+";
 
 }
 
+}
 
-// =========================
-// SCROLL PROGRESS BAR
-// =========================
+update();
 
-const progressBar = document.createElement("div");
+counterObserver.unobserve(counter);
 
-progressBar.style.position = "fixed";
-progressBar.style.top = "0";
-progressBar.style.left = "0";
-progressBar.style.height = "4px";
-progressBar.style.width = "0%";
-progressBar.style.background = "#00d084";
-progressBar.style.zIndex = "99999";
-
-document.body.appendChild(progressBar);
-
-window.addEventListener("scroll", () => {
-
-    const scroll = document.documentElement.scrollTop;
-
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-    const progress = (scroll / height) * 100;
-
-    progressBar.style.width = progress + "%";
+}
 
 });
 
+});
 
-// =========================
+counters.forEach(counter=>{
+
+counterObserver.observe(counter);
+
+});
+
+// ===============================
+// HERO IMAGE FLOAT
+// ===============================
+
+const heroImage = document.querySelector(".image-circle");
+
+if(heroImage){
+
+setInterval(()=>{
+
+heroImage.classList.toggle("float");
+
+},2000);
+
+}
+
+// ===============================
 // BACK TO TOP BUTTON
-// =========================
+// ===============================
 
 const topBtn = document.createElement("button");
 
-topBtn.innerHTML = "↑";
+topBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
 
-topBtn.id = "topBtn";
+topBtn.id="topBtn";
 
 document.body.appendChild(topBtn);
 
-topBtn.style.position = "fixed";
-topBtn.style.bottom = "25px";
-topBtn.style.right = "25px";
-topBtn.style.width = "50px";
-topBtn.style.height = "50px";
-topBtn.style.border = "none";
-topBtn.style.borderRadius = "50%";
-topBtn.style.cursor = "pointer";
-topBtn.style.background = "#00d084";
-topBtn.style.color = "#000";
-topBtn.style.fontSize = "22px";
-topBtn.style.display = "none";
-topBtn.style.zIndex = "9999";
-topBtn.style.transition = ".3s";
+topBtn.onclick=()=>{
 
-window.addEventListener("scroll", () => {
+window.scrollTo({
 
-    if (window.scrollY > 300) {
+top:0,
 
-        topBtn.style.display = "block";
-
-    } else {
-
-        topBtn.style.display = "none";
-
-    }
+behavior:"smooth"
 
 });
 
-topBtn.addEventListener("click", () => {
+};
 
-    window.scrollTo({
+window.addEventListener("scroll",()=>{
 
-        top: 0,
+if(window.scrollY>400){
 
-        behavior: "smooth"
+topBtn.classList.add("showBtn");
 
-    });
+}else{
 
-});
+topBtn.classList.remove("showBtn");
 
-
-// =========================
-// CARD HOVER EFFECT
-// =========================
-
-const cards = document.querySelectorAll(".card");
-
-cards.forEach(card => {
-
-    card.addEventListener("mousemove", (e) => {
-
-        const rect = card.getBoundingClientRect();
-
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        card.style.background = `radial-gradient(circle at ${x}px ${y}px,
-        rgba(0,208,132,.18),
-        #111 65%)`;
-
-    });
-
-    card.addEventListener("mouseleave", () => {
-
-        card.style.background = "#111";
-
-    });
+}
 
 });
 
+// ===============================
+// PROJECT CARD EFFECT
+// ===============================
 
-// =========================
-// PRELOADER (OPTIONAL)
-// =========================
+document.querySelectorAll(".project-card").forEach(card=>{
 
-window.addEventListener("load", () => {
+card.addEventListener("mouseenter",()=>{
 
-    document.body.classList.add("loaded");
+card.style.transform="translateY(-10px) scale(1.02)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0) scale(1)";
+
+});
+
+});
+
+// ===============================
+// CURRENT YEAR
+// ===============================
+
+const year = new Date().getFullYear();
+
+const copy = document.querySelector(".copyright p");
+
+if(copy){
+
+copy.innerHTML =
+`© ${year} Bhushan Sonawane | AI / ML Engineer | All Rights Reserved`;
+
+}
+
+// ===============================
+// PRELOADER
+// ===============================
+
+window.addEventListener("load",()=>{
+
+document.body.classList.add("loaded");
 
 });
