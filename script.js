@@ -1,297 +1,297 @@
-// ===============================
-// NAVBAR BACKGROUND ON SCROLL
-// ===============================
 
-const header = document.querySelector("header");
+/*==============================
+MOBILE MENU
+==============================*/
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 80) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
+const menu = document.querySelector(".menu");
+const navLinks = document.querySelector(".nav-links");
+
+
+menu.addEventListener("click",()=>{
+
+    navLinks.classList.toggle("active");
+
 });
 
-// ===============================
-// ACTIVE NAVIGATION
-// ===============================
 
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav ul li a");
 
-window.addEventListener("scroll", () => {
+/*==============================
+CLOSE MENU AFTER CLICK
+==============================*/
 
-    let current = "";
+const links = document.querySelectorAll(".nav-links a");
 
-    sections.forEach(section => {
 
-        const sectionTop = section.offsetTop - 120;
+links.forEach(link=>{
 
-        if (pageYOffset >= sectionTop) {
-            current = section.getAttribute("id");
-        }
+    link.addEventListener("click",()=>{
 
-    });
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
+        navLinks.classList.remove("active");
 
     });
 
 });
 
-// ===============================
-// SCROLL REVEAL
-// ===============================
 
-const observer = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry => {
+/*==============================
+TYPING EFFECT
+==============================*/
 
-        if (entry.isIntersecting) {
+const text = [
+    "AI/ML Engineer",
+    "Python Developer",
+    "Machine Learning Enthusiast",
+    "Data Analyst"
+];
 
-            entry.target.classList.add("show");
 
-        }
-
-    });
-
-}, {
-    threshold:0.2
-});
-
-document.querySelectorAll(
-".skill-card,.tool-card,.project-card,.experience-card,.education-card,.certificate-card,.contact-card,.stat-box,.about-container"
-).forEach(el=>{
-
-    el.classList.add("hidden");
-
-    observer.observe(el);
-
-});
-
-// ===============================
-// HERO TYPING EFFECT
-// ===============================
+let index = 0;
+let charIndex = 0;
 
 const typing = document.querySelector(".typing");
 
-const words = [
 
-    "AI / ML Engineer",
+function typeEffect(){
 
-    "Data Scientist",
+    if(charIndex < text[index].length){
 
-    "Python Developer",
+        typing.textContent += text[index].charAt(charIndex);
 
-    "Power BI Developer",
+        charIndex++;
 
-    "Machine Learning Engineer"
-
-];
-
-let wordIndex = 0;
-let charIndex = 0;
-let deleting = false;
-
-function type(){
-
-    const current = words[wordIndex];
-
-    if(!deleting){
-
-        typing.textContent = current.substring(0,charIndex++);
-
-        if(charIndex > current.length){
-
-            deleting = true;
-
-            setTimeout(type,1200);
-
-            return;
-
-        }
-
-    }else{
-
-        typing.textContent = current.substring(0,charIndex--);
-
-        if(charIndex < 0){
-
-            deleting = false;
-
-            wordIndex++;
-
-            if(wordIndex >= words.length){
-
-                wordIndex = 0;
-
-            }
-
-        }
+        setTimeout(typeEffect,100);
 
     }
 
-    setTimeout(type,deleting ? 50 : 100);
+    else{
+
+        setTimeout(eraseEffect,1500);
+
+    }
 
 }
 
-type();
 
-// ===============================
-// COUNTER ANIMATION
-// ===============================
 
-const counters = document.querySelectorAll(".stat-box h2");
+function eraseEffect(){
 
-const speed = 200;
+    if(charIndex > 0){
 
-const counterObserver = new IntersectionObserver(entries=>{
+        typing.textContent =
+        text[index].substring(0,charIndex-1);
 
-entries.forEach(entry=>{
+        charIndex--;
 
-if(entry.isIntersecting){
+        setTimeout(eraseEffect,50);
 
-const counter = entry.target;
+    }
 
-const target = parseInt(counter.innerText);
+    else{
 
-let count = 0;
+        index++;
 
-const update = ()=>{
+        if(index >= text.length){
+            index=0;
+        }
 
-count += Math.ceil(target/speed);
+        setTimeout(typeEffect,300);
 
-if(count < target){
-
-counter.innerText = count + "+";
-
-requestAnimationFrame(update);
-
-}else{
-
-counter.innerText = target + "+";
+    }
 
 }
 
-}
 
-update();
+document.addEventListener("DOMContentLoaded",()=>{
 
-counterObserver.unobserve(counter);
-
-}
+    typeEffect();
 
 });
 
-});
 
-counters.forEach(counter=>{
 
-counterObserver.observe(counter);
+/*==============================
+NAVBAR BACKGROUND ON SCROLL
+==============================*/
 
-});
+const header = document.querySelector(".header");
 
-// ===============================
-// HERO IMAGE FLOAT
-// ===============================
-
-const heroImage = document.querySelector(".image-circle");
-
-if(heroImage){
-
-setInterval(()=>{
-
-heroImage.classList.toggle("float");
-
-},2000);
-
-}
-
-// ===============================
-// BACK TO TOP BUTTON
-// ===============================
-
-const topBtn = document.createElement("button");
-
-topBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-
-topBtn.id="topBtn";
-
-document.body.appendChild(topBtn);
-
-topBtn.onclick=()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-};
 
 window.addEventListener("scroll",()=>{
 
-if(window.scrollY>400){
 
-topBtn.classList.add("showBtn");
+    if(window.scrollY > 50){
 
-}else{
+        header.style.background =
+        "rgba(8,5,18,.85)";
 
-topBtn.classList.remove("showBtn");
+    }
+
+    else{
+
+        header.style.background =
+        "rgba(8,5,18,.55)";
+
+    }
+
+
+});
+
+
+
+/*==============================
+SCROLL TOP BUTTON
+==============================*/
+
+
+const scrollTop = document.getElementById("scrollTop");
+
+
+window.addEventListener("scroll",()=>{
+
+
+    if(window.scrollY > 400){
+
+        scrollTop.classList.remove("hide");
+
+    }
+
+    else{
+
+        scrollTop.classList.add("hide");
+
+    }
+
+
+});
+
+
+
+scrollTop.addEventListener("click",()=>{
+
+    window.scrollTo({
+
+        top:0,
+        behavior:"smooth"
+
+    });
+
+});
+
+
+
+/*==============================
+SCROLL REVEAL ANIMATION
+==============================*/
+
+
+const revealElements =
+document.querySelectorAll(
+".glass, .project-card, .tool-card"
+);
+
+
+
+const reveal = ()=>{
+
+
+    revealElements.forEach(element=>{
+
+
+        let windowHeight =
+        window.innerHeight;
+
+
+        let elementTop =
+        element.getBoundingClientRect().top;
+
+
+        let visible =
+        100;
+
+
+        if(elementTop < windowHeight-visible){
+
+            element.style.opacity="1";
+
+            element.style.transform=
+            "translateY(0)";
+
+        }
+
+
+    });
+
+
+};
+
+
+
+window.addEventListener(
+"scroll",
+reveal
+);
+
+
+reveal();
+
+
+
+/*==============================
+ACTIVE NAV LINK
+==============================*/
+
+
+const sections =
+document.querySelectorAll("section");
+
+
+const navItems =
+document.querySelectorAll(".nav-links a");
+
+
+window.addEventListener("scroll",()=>{
+
+
+let current="";
+
+
+sections.forEach(section=>{
+
+
+let sectionTop =
+section.offsetTop - 150;
+
+
+if(scrollY >= sectionTop){
+
+current =
+section.getAttribute("id");
 
 }
 
-});
-
-// ===============================
-// PROJECT CARD EFFECT
-// ===============================
-
-document.querySelectorAll(".project-card").forEach(card=>{
-
-card.addEventListener("mouseenter",()=>{
-
-card.style.transform="translateY(-10px) scale(1.02)";
 
 });
 
-card.addEventListener("mouseleave",()=>{
 
-card.style.transform="translateY(0) scale(1)";
+navItems.forEach(item=>{
 
-});
 
-});
+item.style.color="#fff";
 
-// ===============================
-// CURRENT YEAR
-// ===============================
 
-const year = new Date().getFullYear();
+if(item.getAttribute("href")
+==
+"#"+current){
 
-const copy = document.querySelector(".copyright p");
 
-if(copy){
+item.style.color="#ff66d6";
 
-copy.innerHTML =
-`© ${year} Bhushan Sonawane | AI / ML Engineer | All Rights Reserved`;
 
 }
 
-// ===============================
-// PRELOADER
-// ===============================
 
-window.addEventListener("load",()=>{
+});
 
-document.body.classList.add("loaded");
 
 });
